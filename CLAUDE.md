@@ -1,3 +1,10 @@
+---
+type: guide
+authority: canonical
+audience: [ai-agents, contributors]
+last-verified: 2026-03-03
+---
+
 # Claude AI Assistant Guide
 
 ## Repository Context
@@ -51,3 +58,6 @@ jupyter notebook
 ## Architecture
 
 Notebook-first educational platform organized into six tool-based modules. Each module provides self-contained Jupyter notebooks with progressive tutorials — from basic quantum gates to VQE molecular simulations, and from crystal structure featurization to transport calculations in 2D materials.
+
+## Governance
+See [AGENTS.md](AGENTS.md) for rules. See [SSOT.md](SSOT.md) for current state.

@@ -49,3 +49,5 @@ graduate students and researchers; all notebooks work in Google Colab free tier.
 - Python modules: `snake_case.py`
 - Classes: `PascalCase`
 - Functions: `snake_case`
+
+See [CLAUDE.md](CLAUDE.md) | [SSOT.md](SSOT.md)
