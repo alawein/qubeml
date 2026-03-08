@@ -1,11 +1,11 @@
----
+﻿---
 type: normative
 authority: canonical
 audience: [agents, contributors, maintainers]
 last-verified: 2026-03-01
 ---
 
-# AGENTS -- qubeml
+# AGENTS — qubeml
 
 > Educational Jupyter notebooks for quantum computing and materials informatics.
 
