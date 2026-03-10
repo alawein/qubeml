@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, master, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, master ]
   schedule:
     # Run tests weekly to catch dependency issues
     - cron: '0 0 * * 0'
