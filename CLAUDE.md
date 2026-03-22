@@ -6,6 +6,7 @@ last-verified: 2026-03-03
 ---
 
 # CLAUDE.md — qubeml
+<!-- CUSTOM OVERRIDE: Educational notebooks with quantum computing and materials informatics specialization (Qiskit, Cirq, PennyLane, Colab compatibility) [Task 1.4 audit Batch 2] -->
 
 ## Repository Context
 

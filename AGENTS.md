@@ -3,6 +3,7 @@ type: normative
 authority: canonical
 audience: [agents, contributors, maintainers]
 last-verified: 2026-03-09
+<!-- CUSTOM OVERRIDE: Educational notebook governance with Colab free-tier constraints and quantum/materials domain rules [Task 1.4 audit Batch 2] -->
 ---
 
 # AGENTS — qubeml
