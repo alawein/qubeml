@@ -156,3 +156,5 @@ docs/api/
 secrets.json
 credentials.json
 config.ini
+# Ops reports (generated locally or in CI artifacts)
+reports/sync-report.*.json
