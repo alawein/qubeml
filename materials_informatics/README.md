@@ -1,3 +1,10 @@
+---
+type: canonical
+source: none
+sync: none
+sla: none
+---
+
 # Materials Informatics Modules
 
 Machine learning and computational tools for materials science applications.

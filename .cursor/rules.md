@@ -1,3 +1,10 @@
+---
+type: canonical
+source: none
+sync: none
+sla: none
+---
+
 # Cursor Rules for qubeml
 
 You are working in qubeml.

@@ -1,3 +1,10 @@
+---
+type: canonical
+source: none
+sync: none
+sla: none
+---
+
 # Contributing to QubeML
 
 Thank you for your interest in contributing to QubeML. This project follows the [alawein org contributing standards](https://github.com/alawein/alawein/blob/main/CONTRIBUTING.md). This document outlines the development process and guidelines.

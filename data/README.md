@@ -1,3 +1,10 @@
+---
+type: canonical
+source: none
+sync: none
+sla: none
+---
+
 # Data Directory
 
 This directory contains sample datasets for demonstrating quantum computing and materials informatics applications.
