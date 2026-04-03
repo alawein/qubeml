@@ -1,51 +1,61 @@
 ---
 type: canonical
-source: none
-sync: none
+source: _devkit/templates
+sync: propagated
 sla: none
 ---
 
-# Contributing to QubeML
+<!-- Token legend:
+     AUTO-SUBSTITUTED by sync-contributing.sh (derived from git remote):
+       qubeml = GitHub slug used as heading (e.g. "bolts", "handshake-hai")
+       qubeml      = GitHub slug used in URLs  (e.g. "bolts", "handshake-hai")
+     MANUALLY FILLED in Plan 2 per-repo pass:
+       {INSTALL_COMMAND}  = e.g. "npm ci" or "uv pip install -e ."
+       {TEST_COMMAND}     = e.g. "npm test" or "pytest"
+       {VALIDATE_COMMAND} = e.g. "npm run lint && npm test" or "ruff check . && pytest"
+-->
 
-Thank you for your interest in contributing to QubeML. This project follows the [alawein org contributing standards](https://github.com/alawein/alawein/blob/main/CONTRIBUTING.md). This document outlines the development process and guidelines.
+# Contributing to qubeml
+
+<!-- REPO-SPECIFIC: one-line context about what this repo is -->
+
+This project follows the [alawein org contributing standards](https://github.com/alawein/alawein/blob/main/CONTRIBUTING.md).
+
+## Getting Started
+
+```bash
+git clone https://github.com/alawein/qubeml.git
+cd qubeml
+{INSTALL_COMMAND}
+```
 
 ## Development Workflow
 
-### Making Changes
-1. **Small, focused changes**: Work on one feature, bug fix, or improvement at a time
-2. **Commit frequently**: Make commits after completing each logical unit of work
-3. **Clear commit messages**: Use descriptive messages that explain what and why
-4. **Test before committing**: Ensure all tests pass before making commits
-5. **One feature per commit**: Avoid bundling multiple unrelated changes
-6. **Pull regularly**: Use `git pull` to sync with remote changes
+1. Branch off `main` using prefix: `feat/`, `fix/`, `docs/`, `chore/`, `test/`
+2. Make your changes — keep PRs focused on a single concern
+3. Run `{TEST_COMMAND}` to validate your changes before committing
+4. Commit using [Conventional Commits](https://www.conventionalcommits.org/) — `type(scope): subject`
+5. Open a Pull Request to `main`
 
-### Code Quality
-- Follow existing code style and conventions
-- Add tests for new functionality
-- Update documentation as needed
-- Run the test suite: `python3 -m pytest tests/ -v`
+## Code Standards
 
-### Project Structure
-- `src/`: Core utilities and shared functions
-- `quantum_computing/`: Quantum computing tutorials and examples
-- `materials_informatics/`: Materials science ML approaches
-- `integrative_projects/`: Combined quantum-materials applications
-- `tests/`: Unit tests for all modules
-- `data/`: Example datasets and samples
+<!-- REPO-SPECIFIC: 2-4 bullets about this repo's conventions -->
+- Follow existing patterns in the codebase
+- Run linting and type checks before committing
+- Write tests for new functionality
 
-### Getting Started
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run tests to ensure setup works: `python3 -m pytest tests/ -v`
-4. Start with small improvements or bug fixes
-5. Follow the established workflow for contributions
+## Pull Request Checklist
 
-### Best Practices
-- Keep changes atomic and reversible
-- Write clear, self-documenting code
-- Add docstrings for new functions and classes
-- Include type hints where appropriate
-- Update relevant documentation
+- [ ] CI passes (no failing checks)
+- [ ] Tests added or updated for new functionality
+- [ ] `{VALIDATE_COMMAND}` passes
+- [ ] `CHANGELOG.md` updated under `[Unreleased]`
+- [ ] No breaking changes without a version bump plan
 
-## Questions?
-Feel free to open an issue for questions about the codebase or development process.
+## Reporting Issues
+
+Open an issue on the [GitHub repository](https://github.com/alawein/qubeml/issues) with steps to reproduce and relevant context.
+
+## License
+
+By contributing, you agree that your contributions will be licensed under [MIT](LICENSE).
