@@ -10,6 +10,8 @@ sla: none
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
+## About
+
 Educational notebooks for quantum computing and materials informatics. Six tool modules covering Qiskit, Cirq, and PennyLane for quantum algorithms, plus PyTorch, scikit-learn, and Kwant for materials modeling.
 
 ## Features
@@ -89,14 +91,7 @@ python -m pytest tests/ -v
 
 MIT License -- see [LICENSE](LICENSE).
 
-## Author
-
-**Meshal Alawein**
-- Email: [contact@meshal.ai](mailto:contact@meshal.ai)
-- GitHub: [github.com/alawein](https://github.com/alawein)
-- LinkedIn: [linkedin.com/in/alawein](https://linkedin.com/in/alawein)
-
 ## Ownership
 
 - **Maintainer:** @alawein
-- **Support:** GitHub Issues on this repository
+- **Support:** [GitHub Issues](https://github.com/alawein/qubeml/issues)
