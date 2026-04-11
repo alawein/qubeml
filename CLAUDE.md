@@ -1,15 +1,11 @@
 ---
 type: canonical
+authority: canonical
+audience: [ai-agents, contributors]
+last-verified: 2026-04-09
 source: none
 sync: none
 sla: none
----
-
-﻿---
-type: guide
-authority: canonical
-audience: [ai-agents, contributors]
-last-verified: 2026-03-03
 ---
 
 # CLAUDE.md — qubeml
