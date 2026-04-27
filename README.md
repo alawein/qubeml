@@ -1,10 +1,3 @@
----
-type: canonical
-source: none
-sync: none
-sla: none
----
-
 # QubeML
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -18,7 +11,7 @@ Educational notebooks for quantum computing and materials informatics. Six tool 
 
 - **Quantum Computing** -- VQE for molecular ground states, custom gates, noise simulation, quantum kernels
 - **Materials Informatics** -- Crystal graph neural networks, PCA on materials datasets, 2D material transport
-- **Hands-On Tutorials** -- Jupyter notebooks designed for graduate students and researchers
+- **Tutorial Notebooks** -- Jupyter notebooks designed for graduate students and researchers
 - **Google Colab Support** -- All notebooks work in Colab's free tier
 
 ## Modules
