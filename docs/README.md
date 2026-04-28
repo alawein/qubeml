@@ -1,30 +1,22 @@
----
-type: derived
-owner: platform-engineering
-last-reviewed: 2026-03-31
-source: ../README.md
-sync: manual
-sla: none
----
+# Docs
 
-# Documentation Index — qubeml
+This lane holds QubeML's notebook-first architecture, theory notes, learning
+path material, and the operations documents for running the repo cleanly.
 
-Quantum ML experiments
+## Start here
 
-## Start Here
+- [architecture.md](architecture.md) for the notebook-first repo structure.
+- [theory.md](theory.md) for the scientific background.
+- [api.md](api.md) for the small support-layer API surface.
+- [tool_progression_matrix.md](tool_progression_matrix.md) for the staged
+  learning path across toolchains.
+- [QUANTUMALGO_RESEARCH_PLAN.md](QUANTUMALGO_RESEARCH_PLAN.md) for the longer
+  research direction.
+- `operations/` and [troubleshooting.md](troubleshooting.md) for practical repo
+  maintenance.
+- [INDEX.md](INDEX.md) for the derived document map.
 
-- [README](../README.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Security Policy](../SECURITY.md)
-- [Changelog](../CHANGELOG.md)
+## Notes
 
-## Core Docs
-
-- [Architecture Overview](./architecture.md)
-- [Deployment and Release](./deployment.md)
-- [Troubleshooting](./troubleshooting.md)
-
-## Ownership
-
-- Owning team: alawein-core
-- Support: @alawein
+- Keep the docs honest about the real center of gravity here: the notebooks and
+  teaching flow, not a standalone library surface.

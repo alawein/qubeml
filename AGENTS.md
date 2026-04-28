@@ -5,53 +5,43 @@ sync: none
 sla: none
 authority: canonical
 audience: [agents, contributors, maintainers]
-last-verified: 2026-03-09
-<!-- CUSTOM OVERRIDE: Educational notebook governance with Colab free-tier constraints and quantum/materials domain rules [Task 1.4 audit Batch 2] -->
+last_updated: 2026-04-15
+last-verified: 2026-04-15
 ---
 
-# AGENTS — qubeml
+# AGENTS — QubeML
 
-> Educational Jupyter notebooks for quantum computing and materials informatics.
+## Workspace identity
 
-## Repository Scope
+QubeML is an educational-notebooks repo for quantum computing and materials
+informatics.
 
-Six tool modules covering Qiskit, Cirq, and PennyLane for quantum algorithms,
-plus PyTorch, scikit-learn, and Kwant for materials modeling. Designed for
-graduate students and researchers; all notebooks work in Google Colab free tier.
+## Directory structure
 
-## Key Directories
+- `quantum_computing/`: quantum notebook families
+- `materials_informatics/`: materials notebook families
+- `src/`: shared utility layer
+- `tests/`: required verification for utilities
 
-| Directory | Purpose |
-|-----------|---------|
-| `quantum_computing/qiskit/` | VQE tutorials, ansatz comparison, basis set studies |
-| `quantum_computing/cirq/` | Gate decomposition, error models, qubit calibration |
-| `quantum_computing/pennylane/` | Quantum embeddings, kernel methods |
-| `materials_informatics/pytorch/` | CGCNN for band gaps, descriptor engineering |
-| `materials_informatics/scikit_learn/` | Materials Project queries, feature importance |
-| `materials_informatics/kwant/` | Graphene ribbons, MoS2 transistors, strain effects |
+## Governance rules
 
-## Commands
+1. Notebooks are the primary learning surface.
+2. Keep notebooks runnable in Colab-friendly environments where practical.
+3. Add or update tests when shared utility behavior changes.
+4. Do not bury teaching context in opaque helper code.
+5. Comments and markdown should explain the scientific idea first.
 
-- `pip install -r requirements.txt` -- install dependencies
-- `jupyter notebook` -- launch notebook server
-- `pytest` -- run tests
+## Code conventions
 
-## Agent Rules
+- `src/` utilities stay small and reusable
+- Notebook names remain descriptive and stable
+- Conventional commits only
 
-- Read this file before making changes
-- All notebooks must work in Google Colab free tier
-- Include `pip install` cells at the top of each notebook for Colab
-- Include clear markdown explanations between code cells
-- Add tests for utility functions (`pytest`)
-- Do not add dependencies that exceed Colab's free tier resources
-- Keep notebooks self-contained and runnable independently
-- Use conventional commit messages: `feat(scope):`, `fix(scope):`, etc.
+## Build and test commands
 
-## Naming Conventions
-
-- Notebooks: `snake_case.ipynb`
-- Python modules: `snake_case.py`
-- Classes: `PascalCase`
-- Functions: `snake_case`
-
-See [CLAUDE.md](CLAUDE.md) | [SSOT.md](SSOT.md)
+```bash
+pip install -r requirements.txt
+pip install -e ".[dev]"
+pytest
+jupyter notebook
+```
