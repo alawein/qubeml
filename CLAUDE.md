@@ -1,67 +1,64 @@
 ---
 type: canonical
-authority: canonical
-audience: [ai-agents, contributors]
-last-verified: 2026-04-09
 source: none
 sync: none
 sla: none
+authority: canonical
+audience: [ai-agents, contributors]
+last_updated: 2026-04-15
+last-verified: 2026-04-15
 ---
 
-# CLAUDE.md — qubeml
-<!-- CUSTOM OVERRIDE: Educational notebooks with quantum computing and materials informatics specialization (Qiskit, Cirq, PennyLane, Colab compatibility) [Task 1.4 audit Batch 2] -->
+# CLAUDE.md — QubeML
 
-## Repository Context
+## Workspace identity
 
-**Name:** QubeML  
-**Type:** educational-notebooks  
-**Purpose:** Educational Jupyter notebooks for quantum computing (Qiskit, Cirq, PennyLane) and materials informatics (PyTorch, scikit-learn, Kwant). Six modules covering VQE, quantum kernels, crystal graph neural networks, and 2D material transport — designed for graduate students and researchers.
+QubeML is an educational-notebooks repo for quantum computing and materials
+informatics. The notebooks are the primary teaching surface. The small `src/`
+package exists to support those notebooks, not to replace them with a generic
+library story.
 
-## Tech Stack
+Shared voice and research-writing contract:
 
-- **Language:** Python 3.9+
-- **Quantum:** Qiskit, Cirq, PennyLane
-- **ML/Materials:** PyTorch, scikit-learn, Kwant
-- **Environment:** `requirements.txt`, Google Colab compatible
-- **Testing:** pytest
+- <https://github.com/alawein/alawein/blob/main/docs/style/VOICE.md>
+- <https://github.com/alawein/alawein/blob/main/prompt-kits/AGENT.md>
 
-## Key Files
+## Directory structure
 
-- `README.md` — Main documentation with module overview
-- `requirements.txt` — Python dependencies
-- `quantum_computing/qiskit/` — VQE tutorials, ansatz comparison, basis set studies
-- `quantum_computing/cirq/` — Gate decomposition, error models, qubit calibration
-- `quantum_computing/pennylane/` — Quantum embeddings, kernel methods
-- `materials_informatics/pytorch/` — CGCNN for band gaps, descriptor engineering
-- `materials_informatics/scikit_learn/` — Materials Project queries, feature importance
-- `materials_informatics/kwant/` — Graphene ribbons, MoS2 transistors, strain effects
+- `quantum_computing/qiskit/`: VQE, chemistry, and ansatz notebooks
+- `quantum_computing/cirq/`: circuit, noise, and calibration notebooks
+- `quantum_computing/pennylane/`: quantum ML notebooks
+- `materials_informatics/pytorch/`: graph and neural materials notebooks
+- `materials_informatics/scikit_learn/`: classical materials ML notebooks
+- `materials_informatics/kwant/`: transport notebooks
+- `src/`: shared utilities for notebooks
+- `tests/`: utility verification
 
-## Development Guidelines
+## Governance rules
 
-1. All notebooks must work in Google Colab's free tier
-2. Include clear markdown explanations between code cells
-3. Add `pip install` cells at the top of each notebook for Colab
-4. Add tests for utility functions (`pytest`)
-5. Use conventional commits
+1. Keep the notebooks as the primary learning surface.
+2. The shared `src/` utilities support notebook clarity; they should not absorb
+   notebook-specific teaching context unless reuse is real.
+3. Notebooks should stay runnable in Google Colab free tier unless a notebook
+   explicitly declares a heavier requirement.
+4. Keep install cells and explanatory markdown in notebooks aligned with the
+   actual environment assumptions.
+5. Avoid dependency creep that makes teaching notebooks fragile.
+6. Keep quantum and materials terminology precise rather than collapsing both
+   sides into vague "AI" language.
 
-## Common Tasks
+## Code conventions
 
-### Running Tests
+- Shared Python helpers live under `src/`.
+- Comments and markdown should teach the idea, not narrate the obvious code.
+- Keep mathematical notation clean and consistent with the notebook exposition.
+- Tests belong on the shared utility layer when behavior moves out of notebooks.
+
+## Build and test commands
+
 ```bash
-pytest
-```
-
-### Setting Up Locally
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+pip install -e ".[dev]"
+pytest
 jupyter notebook
 ```
-
-## Architecture
-
-Notebook-first educational platform organized into six tool-based modules. Each module provides self-contained Jupyter notebooks with progressive tutorials — from basic quantum gates to VQE molecular simulations, and from crystal structure featurization to transport calculations in 2D materials.
-
-## Governance
-See [AGENTS.md](AGENTS.md) for rules. See [SSOT.md](SSOT.md) for current state.

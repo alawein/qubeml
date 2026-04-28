@@ -1,97 +1,54 @@
----
-type: canonical
-source: none
-sync: none
-sla: none
----
-
 # QubeML
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+QubeML is a notebook-first teaching repo for quantum computing and materials
+informatics. The work is organized around concrete toolchains rather than one
+abstract "quantum AI" layer: Qiskit, Cirq, and PennyLane on one side; PyTorch,
+scikit-learn, and Kwant on the other.
 
-## About
+The shared `src/` layer exists only to support those notebooks with utilities.
+The notebooks remain the primary learning surface, and they should stay runnable
+without assuming a local workstation more capable than Google Colab free tier.
 
-Educational notebooks for quantum computing and materials informatics. Six tool modules covering Qiskit, Cirq, and PennyLane for quantum algorithms, plus PyTorch, scikit-learn, and Kwant for materials modeling.
+## Core surfaces
 
-## Features
+- `quantum_computing/`: notebook families for Qiskit, Cirq, and PennyLane
+- `materials_informatics/`: notebook families for PyTorch, scikit-learn, and
+  Kwant
+- `src/`: shared utility layer for plotting, materials helpers, and quantum
+  helpers
+- `tests/`: verification for the shared Python utilities
+- `docs/`: architecture, theory, and notebook progression notes
 
-- **Quantum Computing** -- VQE for molecular ground states, custom gates, noise simulation, quantum kernels
-- **Materials Informatics** -- Crystal graph neural networks, PCA on materials datasets, 2D material transport
-- **Hands-On Tutorials** -- Jupyter notebooks designed for graduate students and researchers
-- **Google Colab Support** -- All notebooks work in Colab's free tier
-
-## Modules
-
-| Module | Key Implementations |
-|--------|-----------------------|
-| Qiskit | VQE ground states, ansatz comparison, basis set effects |
-| PyTorch | CGCNN for band gaps, descriptor engineering |
-| Scikit-learn | Materials Project queries, feature importance |
-| Kwant | Graphene ribbons, MoS2 transistors |
-| Cirq | Error mitigation, qubit calibration |
-| PennyLane | Quantum embeddings, kernel methods |
-
-## Installation
+## Quick start
 
 ```bash
 git clone https://github.com/alawein/qubeml.git
 cd qubeml
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+venv\Scripts\activate
 pip install -r requirements.txt
+jupyter notebook
 ```
 
-## Usage
+## Notebook families
 
-**Quantum Chemistry** (`quantum_computing/qiskit/`):
-- Build H2 molecule, run VQE with UCCSD ansatz
-- Compare to exact diagonalization
-- Basis set convergence study
+| Surface | Role |
+|---------|------|
+| `quantum_computing/qiskit/` | VQE, ansatz comparison, chemistry examples |
+| `quantum_computing/cirq/` | Gates, noise, and calibration workflows |
+| `quantum_computing/pennylane/` | Quantum ML and kernel methods |
+| `materials_informatics/pytorch/` | Graph and neural models for materials |
+| `materials_informatics/scikit_learn/` | Classical materials ML workflows |
+| `materials_informatics/kwant/` | Transport and device simulations |
 
-**Graph Neural Networks** (`materials_informatics/pytorch/`):
-- Load crystal structures from CIF
-- Build graph representation
-- Train CGCNN on Materials Project data
-
-**Transport** (`materials_informatics/kwant/`):
-- Graphene nanoribbon conductance
-- MoS2 field-effect transistor
-- Strain effects on band structure
-
-## Project Structure
-
-```
-qubeml/
-├── quantum_computing/
-│   ├── qiskit/        # VQE tutorials, molecule examples
-│   ├── cirq/          # Gate decomposition, error models
-│   └── pennylane/     # Quantum ML demos
-├── materials_informatics/
-│   ├── pytorch/       # GNN implementations
-│   ├── scikit_learn/  # Classical ML pipelines
-│   └── kwant/         # Transport simulations
-├── src/               # Utilities (descriptors, plotting)
-└── tests/             # Unit tests
-```
-
-## Testing
+## Development
 
 ```bash
-python -m pytest tests/ -v
+pip install -e ".[dev]"
+pytest
 ```
 
-## References
+## Documentation
 
-- Qiskit Textbook: https://qiskit.org/textbook/
-- Materials Project: https://materialsproject.org/
-- CGCNN paper: Xie & Grossman, Phys. Rev. Lett. 120, 145301 (2018)
-
-## License
-
-MIT License -- see [LICENSE](LICENSE).
-
-## Ownership
-
-- **Maintainer:** @alawein
-- **Support:** [GitHub Issues](https://github.com/alawein/qubeml/issues)
+Start with [docs/README.md](docs/README.md) for architecture notes, theory, and
+the notebook progression matrix.
