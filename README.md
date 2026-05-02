@@ -7,6 +7,15 @@
 
 Educational notebooks for quantum computing and materials informatics. Six tool modules covering Qiskit, Cirq, and PennyLane for quantum algorithms, plus PyTorch, scikit-learn, and Kwant for materials modeling.
 
+## Public value
+
+QubeML is a research-teaching portfolio candidate: it combines quantum
+computing tutorials, materials informatics, and notebook-first explanation in a
+way that is legible to graduate students and technical reviewers. Public polish
+should focus on reproducible notebooks, dataset provenance, dependency
+versions, and clear separation between educational examples and original
+claims.
+
 ## Features
 
 - **Quantum Computing** -- VQE for molecular ground states, custom gates, noise simulation, quantum kernels
@@ -73,6 +82,13 @@ qubeml/
 ```bash
 python -m pytest tests/ -v
 ```
+
+## Data boundaries
+
+Materials Project queries and generated notebook outputs should document their
+source, access requirements, and regeneration path. Keep API keys, private
+datasets, large generated artifacts, and machine-local notebook outputs out of
+committed examples unless they are intentionally public and reproducible.
 
 ## References
 
