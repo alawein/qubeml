@@ -1,5 +1,12 @@
 # QubeML
 
+Status:      frozen
+Category:    research
+Owner:       alawein
+Visibility:  public
+Purpose:     Quantum machine learning experiments and research.
+Next action: continue
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
