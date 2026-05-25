@@ -8,8 +8,7 @@ License: MIT License © 2025
 
 import numpy as np
 import matplotlib.pyplot as plt
-from typing import Dict, List, Optional, Tuple, Union
-import warnings
+from typing import Dict, List, Optional
 
 try:
     import seaborn as sns
@@ -236,7 +235,6 @@ def plot_crystal_structure(
     Returns:
         Matplotlib figure
     """
-    from mpl_toolkits.mplot3d import Axes3D
     
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111, projection='3d')

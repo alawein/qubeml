@@ -9,7 +9,6 @@ The main happy-path tests live in test_materials_utils.py.  This file adds:
 
 import numpy as np
 import pytest
-import warnings
 
 from src.materials_utils import (
     create_crystal_descriptors,

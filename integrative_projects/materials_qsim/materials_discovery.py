@@ -12,15 +12,11 @@ from dataclasses import dataclass, field
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.gaussian_process import GaussianProcessRegressor
-from sklearn.gaussian_process.kernels import RBF, Matern, WhiteKernel
+from sklearn.gaussian_process.kernels import RBF, WhiteKernel
 from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
-import seaborn as sns
 from scipy.optimize import differential_evolution
 import warnings
 warnings.filterwarnings('ignore')
@@ -222,8 +218,7 @@ class MaterialsOptimizer:
         """Optimize composition using evolutionary algorithm."""
         
         elements = list(initial_composition.keys())
-        n_elements = len(elements)
-        
+
         def objective(x):
             composition = {elem: x[i] for i, elem in enumerate(elements)}
             
@@ -500,7 +495,7 @@ class MaterialsDiscoveryPipeline:
                 axes[1, 1].bar(composition_cols, correlations)
                 axes[1, 1].set_xlabel('Element')
                 axes[1, 1].set_ylabel(f'Correlation with {prop}')
-                axes[1, 1].set_title(f'Element-Property Correlations')
+                axes[1, 1].set_title('Element-Property Correlations')
                 axes[1, 1].axhline(y=0, color='black', linestyle='-', linewidth=0.5)
         
         plt.tight_layout()

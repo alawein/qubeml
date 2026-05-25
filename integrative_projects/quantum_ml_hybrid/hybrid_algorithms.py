@@ -10,7 +10,7 @@ import pennylane as qml
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from typing import List, Tuple, Optional, Dict, Any, Callable
+from typing import List, Tuple, Dict, Any
 from dataclasses import dataclass
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler

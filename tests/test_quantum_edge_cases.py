@@ -9,7 +9,6 @@ Supplements test_quantum_utils.py with:
 
 import numpy as np
 import pytest
-import warnings
 
 from src.quantum_utils import (
     create_bell_state,

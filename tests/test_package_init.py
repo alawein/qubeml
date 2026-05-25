@@ -1,6 +1,5 @@
 """Tests for the src package-level __init__.py exports."""
 
-import pytest
 
 
 class TestPackageInit:
