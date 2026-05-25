@@ -6,8 +6,6 @@ and that the figure contains the expected axes / annotations.
 """
 
 import numpy as np
-import pytest
-import matplotlib
 import matplotlib.pyplot as plt
 
 from src.plotting_utils import (
