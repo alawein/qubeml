@@ -5,8 +5,8 @@ sync: none
 sla: none
 authority: canonical
 audience: [ai-agents, contributors]
-last_updated: 2026-05-24
-last-verified: 2026-05-24
+last_updated: 2026-05-30
+last-verified: 2026-05-30
 ---
 
 # CLAUDE.md: QubeML
@@ -61,4 +61,13 @@ pip install -r requirements.txt
 pip install -e ".[dev]"
 pytest
 jupyter notebook
+```
+
+Lint, format, and type-check (config lives in `pyproject.toml`):
+
+```bash
+black .          # format (line-length 88, configured in [tool.black])
+black --check .  # verify formatting without writing
+flake8           # lint (dev dependency; no repo config file, uses defaults)
+mypy src         # type-check (configured in [tool.mypy], python 3.9)
 ```
