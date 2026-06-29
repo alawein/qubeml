@@ -48,6 +48,22 @@ Document dependency versions and seeds when adapting examples for publication.
 - See [data/README.md](data/README.md) for provenance and usage notes
 - Live Materials Project queries require an API key; keep keys out of committed notebooks
 
+
+## Architecture
+
+```text
+qubeml/
+├── src/                   # shared notebook utilities
+├── quantum_computing/     # Qiskit, Cirq, PennyLane notebooks
+├── materials_informatics/ # PyTorch, scikit-learn, Kwant notebooks
+├── integrative_projects/  # cross-domain notebooks
+├── data/                  # bundled fixtures
+├── tests/                 # pytest for src/
+└── docs/                  # architecture, theory, operations
+```
+
+Detail: [docs/architecture/topology.md](docs/architecture/topology.md) and [docs/architecture.md](docs/architecture.md).
+
 ## Docs map
 
 - [docs/README.md](docs/README.md)
