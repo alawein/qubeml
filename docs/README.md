@@ -6,6 +6,7 @@ path material, and the operations documents for running the repo cleanly.
 ## Start here
 
 - [architecture.md](architecture.md) for the notebook-first repo structure.
+- [architecture/topology.md](architecture/topology.md) for the on-disk layout and surface roles.
 - [theory.md](theory.md) for the scientific background.
 - [api.md](api.md) for the small support-layer API surface.
 - [tool_progression_matrix.md](tool_progression_matrix.md) for the staged
