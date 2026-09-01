@@ -45,7 +45,7 @@ python -m pytest tests/ -q
 ```
 
 Verified 2026-08-31 on Python 3.12: 80 passed, 1 skipped. `test_materials_discovery.py`
-(18 tests) needs the `materials` extra (`pip install -e ".[materials]"`) and is
+(18 tests) needs the `ml` extra (`pip install -e ".[ml]"`) and is
 not part of this run.
 
 Run notebooks from `quantum_computing/` or `materials_informatics/` with the
