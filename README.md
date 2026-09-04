@@ -5,7 +5,6 @@ Category:    lab
 Owner:       alawein
 Visibility:  public
 Purpose:     Quantum machine learning experiments and research.
-Next action: continue
 
 ## Abstract
 
