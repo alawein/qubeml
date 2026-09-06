@@ -360,26 +360,3 @@ def estimate_bulk_modulus(
     bulk_modulus = np.clip(bulk_modulus, 10, 400)
     
     return float(bulk_modulus)
-
-
-# TODO: Add more property prediction functions
-# Ideas:
-# - Thermal conductivity estimation
-# - Dielectric constant prediction  
-# - Magnetic moment calculation
-# 
-# RESEARCH: Check Materials Project API for reference data
-# Need to validate against experimental values
-
-def calculate_thermal_conductivity():
-    """
-    Estimate thermal conductivity from structure.
-    
-    TODO: Implement Slack model or machine learning approach
-    References to check:
-    - Slack (1973) - Thermal conductivity of pure metals
-    - Toberer et al. (2008) - Electronic thermal conductivity
-    """
-    # FIXME: Just a placeholder for now
-    # Need to research proper models
-    pass
