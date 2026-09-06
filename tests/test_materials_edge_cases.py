@@ -10,6 +10,7 @@ The main happy-path tests live in test_materials_utils.py.  This file adds:
 import numpy as np
 import pytest
 
+import src.materials_utils as materials_utils
 from src.materials_utils import (
     create_crystal_descriptors,
     calculate_composition_entropy,
@@ -235,3 +236,8 @@ class TestEstimateBulkModulus:
             atomic_numbers=[6, 6],
         )
         assert result > 0
+
+
+def test_unimplemented_thermal_conductivity_placeholder_is_not_exported():
+    """The materials utility module exposes only implemented behavior."""
+    assert not hasattr(materials_utils, "calculate_thermal_conductivity")
